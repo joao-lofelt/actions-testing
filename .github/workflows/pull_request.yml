@@ -17,3 +17,9 @@ jobs:
     - uses: actions/checkout@v2
     - name: Build
       run: cargo build --verbose
+    - name: Adding linter
+      run: rustup component add clippy
+    - name: Running linter
+      run: cargo clippy -- -D warnings
+    - name: Tests
+      run: cargo 
