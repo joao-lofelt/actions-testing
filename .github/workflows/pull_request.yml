@@ -10,19 +10,14 @@ jobs:
         os:
           - ubuntu-latest
           - windows-latest
-    
 
     steps:
     - uses: actions/checkout@v2
     - name: Build
       run: cargo build --verbose
-    - name: Adding linter
+    - name: Adding Clippy
       run: rustup component add clippy
-    - uses: actions-rs/clippy-check@v1
-      with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          args: -- -D warnings
-#     - name: Running linter
-#       run: cargo clippy -- -D warnings
+    - name: Running Clippy
+      run: cargo clippy -- -D warnings
     - name: Tests
       run: cargo test --verbose
