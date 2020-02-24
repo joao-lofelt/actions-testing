@@ -22,4 +22,4 @@ jobs:
     - name: Running linter
       run: cargo clippy -- -D warnings
     - name: Tests
-      run: cargo 
+      run: cargo test --verbose
