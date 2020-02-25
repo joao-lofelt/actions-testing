@@ -1,7 +1,3 @@
-fn test_fake(test: i32) {
-
-}
-
 
 
 
