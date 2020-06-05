@@ -1,4 +1,4 @@
-name: Test Status
+name: build-tests
 
 on:
   push:
