@@ -17,4 +17,6 @@ jobs:
       run: cargo test --verbose
     - name: Revert commit
       uses: srt32/revert@v0.0.1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       if: ${{ failure() }}
